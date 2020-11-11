@@ -202,10 +202,10 @@ for linea in archivo:
 S_predicha = [s_1,s_2,s_3,s_4,s_5,s_6,s_7,s_8,s_9,s_10,s_11,s_12,s_13]
 
 figure(1)
-tiempo = array(tiempo)/(24*3600)
+tiempo = 
 for i in range(13):
-	plot(tiempo, S_predicha[i], label=f'Sensor {i+1} - Predicha', color= "blue")
-	plot(tiempo, sensores[i], label=f'Sensor {i+1} - Experimental', color= "orange")
+	plot(np.arange(0, int(Days/dt), 1), S_predicha[i], label=f'Sensor {i+1} - Predicha', color= "blue")
+	plot(np.array(tiempo)/(24*3600), sensores[i], label=f'Sensor {i+1} - Experimental', color= "orange")
 	legend(loc="upper right")
 	xlabel("Tiempo (Dias)")
 	ylabel("Temperatura (Celcius)")
