@@ -9,6 +9,8 @@ Para la correcta solución de esto, se debió utilizar lo que se realizó para l
 
 <br>
 
+# Informe
+
 ### Paso a 3D
 
 Para pasar a 3D, se añadieron los parametros que se presentan a continuación.
