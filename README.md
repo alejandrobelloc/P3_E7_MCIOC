@@ -6,7 +6,7 @@ Para la correcta solución de esto, se debió utilizar lo que se realizó para l
 
 # **Aviso importante**
 **Sin embargo, surgió un problema al intentar correr el programa a través de Putty, dado que al ingresar con la contraseña de nuestro grupo (4), este no dejaba abrir el cluster y se cerraba automáticamente el programa, por lo cual no se pudo obtener lo que se pedía para la entrega. No obstante, igualmente se observarán a continuación, algunos de los gráficos anteriormente mencionados, además de los códigos para correr en Python o algún otro software lo pedido.**
-
+**Además tuvimos otros problemas como en la función imshowbien, donde se trató de cambiar los parámetros de varias formas, pero todas terminaban dando un error parecido de invalid index. Lo mismo pasó con las gráficas de temperaturas que entregaba error por la misma función de imshowbien.**
 <br>
 
 # Informe
@@ -39,3 +39,5 @@ Con esto el Laplaciano quedó de la siguiente forma
  
 Para realizar esto se utilizó en primer lugar el codigo que se encuentra adjunto en esta entrega llamado "caso3d.py" donde se reutilizó el codigo entregado en el enunciado llamado "graficar.py" donde se pasaban los datos disponibles en el archivo .csv para poder graficar los diferentes sensores para el caso 1 - camara de curado. Luego por cada sensor se creo un array donde se fueron guardando los datos correspondientes al sensor, los que se sacaron de u_k en la posicion redondeada del sensor (esto debido a que algunos puntos no se encontraban en el arreglo).
 Finalmente, se creó un codigo que recorria ambas listas de arreglos e iba graficando la temperatura en el tiempo para cada sensor ya sea la predicha como la registrada.
+
+
