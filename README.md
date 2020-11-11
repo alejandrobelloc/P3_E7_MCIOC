@@ -9,10 +9,19 @@ Para la correcta solución de esto, se debió utilizar lo que se realizó para l
 
 <br>
 
-Para esta entrega:
 
-Utilizar condiciones de borde de gradiente cero para los lados del bloque (lados izquierdo, derecho, adelante, atrás y abajo del bloque)
-Utilizar la temperatura ambiental en la cara arriba del bloque. 
-Entrega via GitHub de código y breve informe en su Readme.md. Muestre la temperatura en el tiempo para cada sensor tanto predicha como registrada, cada sensor por separado. También muestre imágenes de la temperatura de su modelo en "cortes" del centro modelo en los 3 planos (3 figuras total), cada 30 minutos por 2 dias. Genere un gif animado con la evolución térmica observada. Comente sus resultados en el tiempo y también los cortes. 
+### Condiciones de Borde
+- Utilizar condiciones de borde de gradiente cero para los lados del bloque (lados izquierdo, derecho, adelante, atrás y abajo del bloque)
+- Utilizar la temperatura ambiental en la cara arriba del bloque. 
+
+<br>
+
+    - u_k[0,:,:] = u_k[1,:,:] + 0*dx      #borde delantero
+    - u_k[-1,:,:] = u_k[-2,:,:] + 0*dx    #borde trasero
+    - u_k[:,:,0] = u_k[:,:,1] + 0*dy      #borde izquierdo
+    - u_k[:,:,-1] = u_k[:,:,-2] + 0*dy    #borde derecho
+    - u_k[:,0,:] = ambiente               #borde superior
+    - u_k[:,-1,:] = u_k[:,-2,:] + 0*dz    #borde inferior
+    - Ambiente se sacó del archivo .cvs correspondiente a las temperaturas registradas en el sensor 14.
 
  
