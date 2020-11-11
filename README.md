@@ -27,14 +27,13 @@ Con esto el Laplaciano quedó de la siguiente forma
 ### Condiciones de Borde
 - Utilizar condiciones de borde de gradiente cero para los lados del bloque (lados izquierdo, derecho, adelante, atrás y abajo del bloque)
 - Utilizar la temperatura ambiental en la cara arriba del bloque. 
-
-    u_k[0,:,:] = u_k[1,:,:] + 0*dx      #borde delantero
-    u_k[-1,:,:] = u_k[-2,:,:] + 0*dx    #borde trasero
-    u_k[:,:,0] = u_k[:,:,1] + 0*dy      #borde izquierdo
-    u_k[:,:,-1] = u_k[:,:,-2] + 0*dy    #borde derecho
-    u_k[:,0,:] = ambiente               #borde superior
-    u_k[:,-1,:] = u_k[:,-2,:] + 0*dz    #borde inferior
-    Ambiente se sacó del archivo .cvs correspondiente a las temperaturas registradas en el sensor 14.
+   - u_k[0,:,:] = u_k[1,:,:] + 0*dx      #borde delantero
+   - u_k[-1,:,:] = u_k[-2,:,:] + 0*dx    #borde trasero
+   - u_k[:,:,0] = u_k[:,:,1] + 0*dy      #borde izquierdo
+   - u_k[:,:,-1] = u_k[:,:,-2] + 0*dy    #borde derecho
+   - u_k[:,0,:] = ambiente               #borde superior
+   - u_k[:,-1,:] = u_k[:,-2,:] + 0*dz    #borde inferior
+   - Ambiente se sacó del archivo .cvs correspondiente a las temperaturas registradas en el sensor 14.
 
 ### Temperatura en el tiempo para cada sensor tanto predicha como registrada, cada sensor por separado
  
