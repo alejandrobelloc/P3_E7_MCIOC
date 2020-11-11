@@ -6,7 +6,7 @@ Para la correcta solución de esto, se debió utilizar lo que se realizó para l
 
 # **Aviso importante**
 **Sin embargo, surgió un problema al intentar correr el programa a través de Putty, dado que al ingresar con la contraseña de nuestro grupo (4), este no dejaba abrir el cluster y se cerraba automáticamente el programa, por lo cual no se pudo obtener lo que se pedía para la entrega. No obstante, igualmente se observarán a continuación, algunos de los gráficos anteriormente mencionados, además de los códigos para correr en Python o algún otro software lo pedido.**
-**Además tuvimos otros problemas como en la función imshowbien, donde se trató de cambiar los parámetros de varias formas, pero todas terminaban dando un error parecido de invalid index. Lo mismo pasó con las gráficas de temperaturas que entregaba error por la misma función de imshowbien.**
+
 <br>
 
 # Informe
@@ -40,4 +40,13 @@ Con esto el Laplaciano quedó de la siguiente forma
 Para realizar esto se utilizó en primer lugar el codigo que se encuentra adjunto en esta entrega llamado "caso3d.py" donde se reutilizó el codigo entregado en el enunciado llamado "graficar.py" donde se pasaban los datos disponibles en el archivo .csv para poder graficar los diferentes sensores para el caso 1 - camara de curado. Luego por cada sensor se creo un array donde se fueron guardando los datos correspondientes al sensor, los que se sacaron de u_k en la posicion redondeada del sensor (esto debido a que algunos puntos no se encontraban en el arreglo).
 Finalmente, se creó un codigo que recorria ambas listas de arreglos e iba graficando la temperatura en el tiempo para cada sensor ya sea la predicha como la registrada.
 
+### Algunos gráficos para la entrega
 
+Como se mencionó anteriormente, se sacaron algunos gráficos para demostrar el funcionamiento del código, todo esto con la disminución de algunos valores para un funcionamiento relativamente rápido de Python, pues si no se achicaban las cotas de las dimensiones del "cubo" de hormigón o los intervalos, este demoraba un tiempo X que no era tolerable a esperar. Los parámetros que se cambiaron fueron los siguientes: 
+
+* a = b = c = 1 metro (Dimensiones del cubo de hormigón, pasando de 10.4 ; 5 ; 5.4 a 1 metro común para el largo ancho y profundidad). 
+* Nx = Ny = Nz = 10 (Pasando de 30 intervalos tanto para el eje x,y,z a 10 común para los distintos ejes)
+
+A su vez, se achicó la simulación de días a graficar, tomando solo el día 1 para los resultados. A continuación se observa la temperatura en función del tiempo (Días vs °C) para el primer sensor, donde se observa la temperatura predicha como también la experimental observada. Se analiza una curva predicha de forma paraboidal con signo negativo, llegando a un máximo de 105 °C y un tiempo de 1800 días; Esto obviamente es una acotación del problema general, pues por los problemas anteriormente mencionados, esto no pudo ser visto de manera completa a través de Putty. 
+
+![alt text](https://github.com/vjguzman/P3_E7_MCIOC/blob/main/Grafico_Camara_de_Curado_Sensor1.png)
