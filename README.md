@@ -1,4 +1,4 @@
-# P3_E7_MCIOC
+# Proyecto 3 - Entrega 7 - MCIOC // Grupo 4
 Para la última entrega del curso, se debe predecir resultados a partir de la curva de hidratación de la tesis de Contreras.
 En particular, se mostrarán las temperaturas en el tiempo de cada sensor y también la misma en cortes del centro modelo en los 3 planos (x,y,z). Luego de esto, se mostrará un gif animado con la evolución térmica a través del bloque de hormigón a estudiar. 
 
